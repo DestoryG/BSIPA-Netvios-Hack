@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BeatSaverSharp</RootNamespace>
+    <AssemblyName>BeatSaverSharp</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationAgent.cs" />
+    <Compile Include="Beatmap.cs" />
+    <Compile Include="BeatmapCharacteristic.cs" />
+    <Compile Include="BeatmapCharacteristicDifficulty.cs" />
+    <Compile Include="BeatSaver.cs" />
+    <Compile Include="Difficulties.cs" />
+    <Compile Include="Exceptions\InvalidPartialException.cs" />
+    <Compile Include="Exceptions\InvalidPartialHashException.cs" />
+    <Compile Include="Exceptions\InvalidPartialKeyException.cs" />
+    <Compile Include="Exceptions\InvalidSteamIDException.cs" />
+    <Compile Include="Exceptions\InvalidTicketException.cs" />
+    <Compile Include="Exceptions\RateLimitExceededException.cs" />
+    <Compile Include="Http.cs" />
+    <Compile Include="HttpOptions.cs" />
+    <Compile Include="HttpResponse.cs" />
+    <Compile Include="Metadata.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Page.cs" />
+    <Compile Include="PageType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RateLimitInfo.cs" />
+    <Compile Include="RestError.cs" />
+    <Compile Include="SearchType.cs" />
+    <Compile Include="SingleType.cs" />
+    <Compile Include="Stats.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\netstandard\netstandard.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff4a}</Project>
+      <Name>netstandard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff39}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

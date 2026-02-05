@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.CSharp</RootNamespace>
+    <AssemblyName>Microsoft.CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consts.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuntimeBinder\ArgumentObject.cs" />
+    <Compile Include="RuntimeBinder\Binder.cs" />
+    <Compile Include="RuntimeBinder\BinderHelper.cs" />
+    <Compile Include="RuntimeBinder\CSharpArgumentInfo.cs" />
+    <Compile Include="RuntimeBinder\CSharpArgumentInfoFlags.cs" />
+    <Compile Include="RuntimeBinder\CSharpBinaryOperationBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpBinaryOperationFlags.cs" />
+    <Compile Include="RuntimeBinder\CSharpBinderFlags.cs" />
+    <Compile Include="RuntimeBinder\CSharpCallFlags.cs" />
+    <Compile Include="RuntimeBinder\CSharpConversionKind.cs" />
+    <Compile Include="RuntimeBinder\CSharpConvertBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpGetIndexBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpGetMemberBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpInvokeBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpInvokeConstructorBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpInvokeMemberBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpIsEventBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpSetIndexBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpSetMemberBinder.cs" />
+    <Compile Include="RuntimeBinder\CSharpUnaryOperationBinder.cs" />
+    <Compile Include="RuntimeBinder\Error.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrArg.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrArgFlags.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrArgIds.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrArgKind.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrArgNoRef.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrArgRefOnly.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrArgSymKind.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrorCode.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrorFacts.cs" />
+    <Compile Include="RuntimeBinder\Errors\ErrorHandling.cs" />
+    <Compile Include="RuntimeBinder\Errors\MessageID.cs" />
+    <Compile Include="RuntimeBinder\Errors\MethPropWithInstMemo.cs" />
+    <Compile Include="RuntimeBinder\Errors\SymWithTypeMemo.cs" />
+    <Compile Include="RuntimeBinder\Errors\UserStringBuilder.cs" />
+    <Compile Include="RuntimeBinder\ExpressionTreeCallRewriter.cs" />
+    <Compile Include="RuntimeBinder\ICSharpBinder.cs" />
+    <Compile Include="RuntimeBinder\ICSharpInvokeOrInvokeMemberBinder.cs" />
+    <Compile Include="RuntimeBinder\ResetBindException.cs" />
+    <Compile Include="RuntimeBinder\RuntimeBinder.cs" />
+    <Compile Include="RuntimeBinder\RuntimeBinderException.cs" />
+    <Compile Include="RuntimeBinder\RuntimeBinderExtensions.cs" />
+    <Compile Include="RuntimeBinder\RuntimeBinderInternalCompilerException.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ACCESS.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ACCESSERROR.cs" />
+    <Compile Include="RuntimeBinder\Semantics\AggCastResult.cs" />
+    <Compile Include="RuntimeBinder\Semantics\AggKindEnum.cs" />
+    <Compile Include="RuntimeBinder\Semantics\AggregateDeclaration.cs" />
+    <Compile Include="RuntimeBinder\Semantics\AggregateSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\AggregateType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ArgInfos.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ArgumentListType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ArrayType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\AssemblyQualifiedNamespaceSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\BetterType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\BindingContext.cs" />
+    <Compile Include="RuntimeBinder\Semantics\BindingFlag.cs" />
+    <Compile Include="RuntimeBinder\Semantics\BinOpFuncKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\BinOpKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\BinOpMask.cs" />
+    <Compile Include="RuntimeBinder\Semantics\BSYMMGR.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CandidateFunctionMember.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CConversions.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CheckConstraintsFlags.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CheckLvalueKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CMemberLookupResults.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CNullable.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ConstCastResult.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ConstVal.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ConstValKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CONVERTTYPE.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ConvKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CSemanticChecker.cs" />
+    <Compile Include="RuntimeBinder\Semantics\CType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ErrorType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\EventSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\EventWithType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\Expr.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprArrayIndex.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprArrayInit.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprAssignment.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprBinOp.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprBlock.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprBoundLambda.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprCall.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprCast.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprClass.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprConcat.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprConstant.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExpressionBinder.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExpressionIterator.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExpressionKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExpressionKindExtensions.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExpressionTreeRewriter.cs" />
+    <Compile Include="RuntimeBinder\Semantics\EXPRExtensions.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprFactory.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprField.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprFieldInfo.cs" />
+    <Compile Include="RuntimeBinder\Semantics\EXPRFLAG.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprHoistedLocalExpr.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprList.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprLocal.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprMemberGroup.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprMethodInfo.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprMulti.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprMultiGet.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprNamedArgumentSpecification.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprOperator.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprProperty.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprPropertyInfo.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprReturn.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprStatement.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprTypeOf.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprUnaryOp.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprUserDefinedConversion.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprUserLogicalOp.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprVisitorBase.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprWithType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprWrap.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ExprZeroInit.cs" />
+    <Compile Include="RuntimeBinder\Semantics\FieldSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\FieldWithType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\FUNDTYPE.cs" />
+    <Compile Include="RuntimeBinder\Semantics\GlobalSymbolContext.cs" />
+    <Compile Include="RuntimeBinder\Semantics\IExprWithArgs.cs" />
+    <Compile Include="RuntimeBinder\Semantics\IExprWithObject.cs" />
+    <Compile Include="RuntimeBinder\Semantics\IndexerSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\KeyPair.cs" />
+    <Compile Include="RuntimeBinder\Semantics\LiftFlags.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ListExtensions.cs" />
+    <Compile Include="RuntimeBinder\Semantics\LocalVariableSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MemberLookup.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MemLookFlags.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethodCallingConventionEnum.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethodGroupType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethodKindEnum.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethodOrPropertySymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethodSignatureEnum.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethodSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethodTypeInferrer.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethPropWithInst.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethPropWithType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethWithInst.cs" />
+    <Compile Include="RuntimeBinder\Semantics\MethWithType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\NamespaceOrAggregateSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\NamespaceSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\NullableCallLiftKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\NullableType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\NullType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\Operators.cs" />
+    <Compile Include="RuntimeBinder\Semantics\OpSigFlags.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ParameterModifierType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\ParentSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PointerType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PredefinedMembers.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PredefinedMethodInfo.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PredefinedPropertyInfo.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PredefinedTypeFacts.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PredefinedTypes.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PREDEFMETH.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PREDEFPROP.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PropertySymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\PropWithType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\Scope.cs" />
+    <Compile Include="RuntimeBinder\Semantics\SpecCons.cs" />
+    <Compile Include="RuntimeBinder\Semantics\SubstContext.cs" />
+    <Compile Include="RuntimeBinder\Semantics\SubstTypeFlags.cs" />
+    <Compile Include="RuntimeBinder\Semantics\symbmask_t.cs" />
+    <Compile Include="RuntimeBinder\Semantics\Symbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\SymbolLoader.cs" />
+    <Compile Include="RuntimeBinder\Semantics\SymFactory.cs" />
+    <Compile Include="RuntimeBinder\Semantics\SYMKIND.cs" />
+    <Compile Include="RuntimeBinder\Semantics\SYMTBL.cs" />
+    <Compile Include="RuntimeBinder\Semantics\SymWithType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\TypeArray.cs" />
+    <Compile Include="RuntimeBinder\Semantics\TypeBind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\TypeFactory.cs" />
+    <Compile Include="RuntimeBinder\Semantics\TypeKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\TypeManager.cs" />
+    <Compile Include="RuntimeBinder\Semantics\TypeParameterSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\TypeParameterType.cs" />
+    <Compile Include="RuntimeBinder\Semantics\TypeTable.cs" />
+    <Compile Include="RuntimeBinder\Semantics\UdConvInfo.cs" />
+    <Compile Include="RuntimeBinder\Semantics\UnaOpFuncKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\UnaOpKind.cs" />
+    <Compile Include="RuntimeBinder\Semantics\UnaOpMask.cs" />
+    <Compile Include="RuntimeBinder\Semantics\UnaryOperatorSignatureFindResult.cs" />
+    <Compile Include="RuntimeBinder\Semantics\UtilityTypeExtensions.cs" />
+    <Compile Include="RuntimeBinder\Semantics\VariableSymbol.cs" />
+    <Compile Include="RuntimeBinder\Semantics\VoidType.cs" />
+    <Compile Include="RuntimeBinder\SpecialNames.cs" />
+    <Compile Include="RuntimeBinder\SymbolTable.cs" />
+    <Compile Include="RuntimeBinder\Syntax\Name.cs" />
+    <Compile Include="RuntimeBinder\Syntax\NameManager.cs" />
+    <Compile Include="RuntimeBinder\Syntax\NameTable.cs" />
+    <Compile Include="RuntimeBinder\Syntax\OperatorKind.cs" />
+    <Compile Include="RuntimeBinder\Syntax\PredefinedName.cs" />
+    <Compile Include="RuntimeBinder\Syntax\PredefinedType.cs" />
+    <Compile Include="RuntimeBinder\Syntax\TokenFacts.cs" />
+    <Compile Include="RuntimeBinder\Syntax\TokenKind.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="System\Runtime\CompilerServices\FriendAccessAllowedAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff49}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff4b}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF3C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BeatSaberMultiplayer</RootNamespace>
+    <AssemblyName>BeatSaberMultiplayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Colors" />
+    <Reference Include="HMLib" />
+    <Reference Include="HMUI" />
+    <Reference Include="Main" />
+    <Reference Include="Oculus.VR" />
+    <Reference Include="Polyglot" />
+    <Reference Include="SteamVR" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.AssetBundleModule" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="Com\Netvios\Proto\BeatSaberMessageReflection.cs" />
+    <Compile Include="Com\Netvios\Proto\DataType.cs" />
+    <Compile Include="Com\Netvios\Proto\GameType.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\AutoMatch.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\BeatSaberBody.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\BeatSaberInboundMessageReflection.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\Body.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\ChangeRoomOwner.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\CreateRoom.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\ExitRoom.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\FastMatch.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\GetPlayer.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\GetRoom.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\InboundMessageReflection.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\JoinRoom.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\KickOutRoomPlayer.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\Login.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\Logout.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\ModifyNickname.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\ModifyPersonalCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\ModifyRoomCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\ModifySongCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\PersonalCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\Ping.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\Renew.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\RoomBroadcast.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\RoomCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\RoomList.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\RoomSubmitScore.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\SongCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\SongList.cs" />
+    <Compile Include="Com\Netvios\Proto\Inbound\StartGame.cs" />
+    <Compile Include="Com\Netvios\Proto\MessageReflection.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\AutoMatch.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\AutoMatchNotice.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\BeatSaberBody.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\BeatSaberOutboundMessageReflection.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\Body.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\ChangeRoomOwner.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\CreateRoom.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\ExitRoom.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\FastMatch.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\GetPlayer.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\GetRoom.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\HeadphoneOnNotice.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\JoinRoom.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\KickedOutNotice.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\KickedOutRoomNotice.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\KickOutRoomPlayer.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\Login.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\Logout.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\ModifyNickname.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\ModifyPersonalCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\ModifyRoomCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\ModifySongCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\OutboundMessageReflection.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\PersonalCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\Ping.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\Renew.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\Room.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\RoomBroadcast.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\RoomBroadcastNotice.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\RoomCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\RoomList.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\RoomPlayer.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\RoomSubmitScore.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\RoomSubmitScoreNotice.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\RoomUpdatedNotice.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\Song.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\SongCfg.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\SongList.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\StartGame.cs" />
+    <Compile Include="Com\Netvios\Proto\Outbound\StartGameNotice.cs" />
+    <Compile Include="Configuration\PluginConfig.cs" />
+    <Compile Include="Data\DifficultyStats.cs" />
+    <Compile Include="Data\GameplayModifiersStruct.cs" />
+    <Compile Include="Data\GameStatus.cs" />
+    <Compile Include="Data\MicrophoneControllerEnum.cs" />
+    <Compile Include="Data\MicrophoneOpenRecordKeyEnum.cs" />
+    <Compile Include="Data\MicrophoneOpt.cs" />
+    <Compile Include="Data\Player.cs" />
+    <Compile Include="Data\PlayerCfg.cs" />
+    <Compile Include="Data\PlayerStatus.cs" />
+    <Compile Include="Data\Room.cs" />
+    <Compile Include="Data\RoomBroadcastDataType.cs" />
+    <Compile Include="Data\RoomBroadcastDataUpdateProgressStruct.cs" />
+    <Compile Include="Data\RoomBroadcastDataUpdateScoreStruct.cs" />
+    <Compile Include="Data\RoomCfg.cs" />
+    <Compile Include="Data\RoomPreset.cs" />
+    <Compile Include="Data\RoomSettings.cs" />
+    <Compile Include="Data\ScrappedSong.cs" />
+    <Compile Include="Data\Song.cs" />
+    <Compile Include="Data\SongCfg.cs" />
+    <Compile Include="Data\SongSelectionType.cs" />
+    <Compile Include="Helper\ControllersHelper.cs" />
+    <Compile Include="Helper\CustomExtensions.cs" />
+    <Compile Include="Helper\JSON.cs" />
+    <Compile Include="Helper\JSONArray.cs" />
+    <Compile Include="Helper\JSONBool.cs" />
+    <Compile Include="Helper\JSONLazyCreator.cs" />
+    <Compile Include="Helper\JSONNode.cs" />
+    <Compile Include="Helper\JSONNodeType.cs" />
+    <Compile Include="Helper\JSONNull.cs" />
+    <Compile Include="Helper\JSONNumber.cs" />
+    <Compile Include="Helper\JSONObject.cs" />
+    <Compile Include="Helper\JSONString.cs" />
+    <Compile Include="Helper\JSONTextMode.cs" />
+    <Compile Include="Helper\PresetsCollection.cs" />
+    <Compile Include="Helper\ProtoHelper.cs" />
+    <Compile Include="Helper\RootObject.cs" />
+    <Compile Include="Helper\ScrappedData.cs" />
+    <Compile Include="Helper\Song.cs" />
+    <Compile Include="Helper\SongDownloader.cs" />
+    <Compile Include="Helper\SongQueueState.cs" />
+    <Compile Include="Helper\Sprites.cs" />
+    <Compile Include="Helper\Utils.cs" />
+    <Compile Include="Interop\BeatSaverDownloaderInterop.cs" />
+    <Compile Include="Interop\IDismissable.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MultiPlayerController.cs" />
+    <Compile Include="OverriddenClasses\CustomMoreSongsFlowCoordinator.cs" />
+    <Compile Include="OverriddenClasses\HarmonyPatcher.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="PluginSetting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\IO\FifoFloatStream.cs" />
+    <Compile Include="UI\FlowCoordinators\CreateRoomFlowCoordinator.cs" />
+    <Compile Include="UI\FlowCoordinators\MasterFlowCoordinator.cs" />
+    <Compile Include="UI\FlowCoordinators\MultiPlayerFlowCoordinator.cs" />
+    <Compile Include="UI\FlowCoordinators\RoomFlowCoordinator.cs" />
+    <Compile Include="UI\FlowCoordinators\RoomsFlowCoordinator.cs" />
+    <Compile Include="UI\FlowCoordinators\SortMode.cs" />
+    <Compile Include="UI\PlayerInfoDisplay.cs" />
+    <Compile Include="UI\PluginUI.cs" />
+    <Compile Include="UI\ViewControllers\InGame\InGameController.cs" />
+    <Compile Include="UI\ViewControllers\MasterView\MasterViewController.cs" />
+    <Compile Include="UI\ViewControllers\MultiPlayerView\MultiPlayerViewController.cs" />
+    <Compile Include="UI\ViewControllers\MultiPlayerView\UserEditorViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\CreateRoomViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\LevelDetailViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\LevelPackImageViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\LevelPacksViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\LevelSelectViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\MultiResultsViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\PlayerManagerViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\PlayingNowViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\RequestsViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\ResultInfo.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\ResultListObject.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\RoomNavigationController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\RoomSettingViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\RoomsViewController.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\TopButtonsState.cs" />
+    <Compile Include="UI\ViewControllers\RoomView\VoipSettingViewController.cs" />
+    <Compile Include="VOIP\AudioUtils.cs" />
+    <Compile Include="VOIP\SpeexCodex.cs" />
+    <Compile Include="VOIP\VoipFragment.cs" />
+    <Compile Include="VOIP\VoipListener.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\dida.wav" />
+    <EmbeddedResource Include="Assets\DoubleArrowIcon.png" />
+    <EmbeddedResource Include="Assets\LockedRoom.png" />
+    <EmbeddedResource Include="Assets\OnlineIcon.png" />
+    <EmbeddedResource Include="Assets\RadioIcon.png" />
+    <EmbeddedResource Include="Assets\RefreshIcon.png" />
+    <EmbeddedResource Include="Assets\RoomsIcon.png" />
+    <EmbeddedResource Include="Assets\Shader.asset" />
+    <EmbeddedResource Include="Assets\SpeakerIcon.png" />
+    <EmbeddedResource Include="Assets\WhitePixel.png" />
+    <EmbeddedResource Include="manifest.json" />
+    <EmbeddedResource Include="UI\ViewControllers\MasterView\MasterViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\MultiPlayerView\MultiPlayerViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\MultiPlayerView\UserEditorViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\CreateRoomViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\LevelDetailViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\LevelPackImageViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\LevelPacksViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\LevelSelectViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\MultiResultsViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\PlayerManagerViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\PlayingNowViewController.xml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\RequestsViewController.xml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\RoomSettingViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\RoomsViewController.bsml" />
+    <EmbeddedResource Include="UI\ViewControllers\RoomView\VoipSettingViewController.bsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\0Harmony\0Harmony.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff2e}</Project>
+      <Name>0Harmony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BeatSaverDownloader\BeatSaverDownloader.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3d}</Project>
+      <Name>BeatSaverDownloader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BSML\BSML.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3f}</Project>
+      <Name>BSML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS_Utils\BS_Utils.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3e}</Project>
+      <Name>BS_Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Google.Protobuf\Google.Protobuf.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff32}</Project>
+      <Name>Google.Protobuf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPA.Loader\IPA.Loader.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff26}</Project>
+      <Name>IPA.Loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff49}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff39}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSpeex\NSpeex.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3a}</Project>
+      <Name>NSpeex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlayerDataPlugin\PlayerDataPlugin.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff47}</Project>
+      <Name>PlayerDataPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SongCore\SongCore.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff48}</Project>
+      <Name>SongCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff4b}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

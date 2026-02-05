@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Mono.Cecil.Pdb</RootNamespace>
+    <AssemblyName>Mono.Cecil.Pdb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomMetadataType.cs" />
+    <Compile Include="CustomMetadataWriter.cs" />
+    <Compile Include="IMetaDataEmit.cs" />
+    <Compile Include="IMetaDataImport.cs" />
+    <Compile Include="ISymUnmanagedDocumentWriter.cs" />
+    <Compile Include="ISymUnmanagedWriter2.cs" />
+    <Compile Include="Microsoft\Cci\ILocalScope.cs" />
+    <Compile Include="Microsoft\Cci\IName.cs" />
+    <Compile Include="Microsoft\Cci\INamespaceScope.cs" />
+    <Compile Include="Microsoft\Cci\IUsedNamespace.cs" />
+    <Compile Include="Microsoft\Cci\PdbIteratorScope.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\AlignSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\AnnotationSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\AttrManyRegSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\AttrManyRegSym2.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\AttrRegRel.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\AttrRegSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\AttrSlotSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\BitAccess.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\BitSet.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\BlockSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\BpRelSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CallsiteInfo.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CFlagSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CFLAGSYM_FLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CoffGroupSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CompileSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\COMPILESYM_FLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ConstSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_CFL_CODE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_CFL_DATA.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_CFL_FPKG.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_Column.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_cookietype.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_DISCARDED.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_EXPROCFLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_FileCheckSum.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_FILE_CHECKSUM_TYPE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_fldattr.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_GENERIC_FLAG.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_GENERIC_STYLE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_int.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_integral.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_LABEL_TYPE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_Line.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_LineSection.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_Line_Flags.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_LINE_SUBSECTION_FLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_LVARFLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_lvar_addr_range.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_methodprop.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_modifier.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_PDMR32_NVVFCN.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_PDMR32_VBASE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_PMFR32_NVMA.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_PMFR32_NVSA.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_PMFR32_VBASE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_pmtype.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_PRIMITIVE_TYPE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_prmode.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_PROCFLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_prop.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_ptrmode.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_ptrtype.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_PUBSYMFLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_real.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_SEPCODEFLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_SIGNATURE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_SourceFile.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_special.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_special2.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_type.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\CV_VTS_desc.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DatasSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DataStream.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DbiDbgHdr.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DbiHeader.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DbiModuleInfo.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DbiSecCon.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DEBUG_S_SUBSECTION.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DEBUG_S_SUBSECTION_TYPE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DefRangeSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DefRangeSym2.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\DiscardedSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\EndArgSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\EntryThisSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ExportSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\EXPORTSYM_FLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\FLOAT10.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\FrameCookie.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\FrameData.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\FRAMEDATA_FLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\FrameProcSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\FRAMEPROCSYM_FLAGS.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\FrameRelSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\IntHashTable.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LabelSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LEAF.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafAlias.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafArgList.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafArray.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafBArray.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafBClass.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafBitfield.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafChar.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafClass.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafCmplx128.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafCmplx32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafCmplx64.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafCmplx80.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafCobol0.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafCobol1.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafDefArg.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafDerived.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafDimArray.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafDimCon.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafDimVar.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafEndPreComp.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafEnum.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafEnumerate.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafFieldList.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafFriendCls.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafFriendFcn.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafIndex.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafLabel.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafList.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafLong.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafManaged.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafMember.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafMemberModify.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafMethod.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafMethodList.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafMFunc.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafModifier.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafNestType.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafNestTypeEx.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafOct.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafOEM.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafOEM2.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafOneMethod.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafPad.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafPointer.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafPointerAttr.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafPreComp.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafProc.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafQuad.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafReal128.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafReal32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafReal64.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafReal80.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafRefSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafShort.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafSkip.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafSTMember.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafTypeServer.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafTypeServer2.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafULong.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafUnion.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafUOct.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafUQuad.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafUShort.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafVarString.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafVBClass.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafVFTPath.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafVFuncOff.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafVFuncTab.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LeafVTShape.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\LocalSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ManProcSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ManProcSymMips.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ManyRegSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ManyRegSym2.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ManyTypRef.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\mlMethod.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\MsfDirectory.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ObjNameSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\OemSymbol.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\OEM_ID.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbConstant.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbDebugException.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbException.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbFile.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbFileHeader.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbFunction.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbLine.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbLines.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbReader.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbScope.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbSlot.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbSource.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbSynchronizationInformation.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbSynchronizationPoint.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PdbTokenLine.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ProcSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ProcSymIa64.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ProcSymMips.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\PubSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\RefSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\RefSym2.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\RegRel32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\RegSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ReturnSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\SearchSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\SectionSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\SepCodSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\Slink32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\SlotSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\SYM.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\SYMTYPE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ThreadSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\ThunkSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\TRAMP.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\TrampolineSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\TYPE_ENUM.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\TYPTYPE.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\UdtSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\UnamespaceSym.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\VpathSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\WithSym32.cs" />
+    <Compile Include="Microsoft\Cci\Pdb\XFixupData.cs" />
+    <Compile Include="ModuleMetadata.cs" />
+    <Compile Include="NativePdbReader.cs" />
+    <Compile Include="NativePdbReaderProvider.cs" />
+    <Compile Include="NativePdbWriter.cs" />
+    <Compile Include="NativePdbWriterProvider.cs" />
+    <Compile Include="PdbReaderProvider.cs" />
+    <Compile Include="PdbWriterProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SymDocumentWriter.cs" />
+    <Compile Include="SymWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mono.Cecil\Mono.Cecil.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff35}</Project>
+      <Name>Mono.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff49}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

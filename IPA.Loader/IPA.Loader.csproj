@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IPA.Loader</RootNamespace>
+    <AssemblyName>IPA.Loader</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.JSONSerializeModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IPA\Config\Config.cs" />
+    <Compile Include="IPA\Config\ConfigProvider.cs" />
+    <Compile Include="IPA\Config\ConfigRuntime.cs" />
+    <Compile Include="IPA\Config\Data\Boolean.cs" />
+    <Compile Include="IPA\Config\Data\FloatingPoint.cs" />
+    <Compile Include="IPA\Config\Data\Integer.cs" />
+    <Compile Include="IPA\Config\Data\List.cs" />
+    <Compile Include="IPA\Config\Data\Map.cs" />
+    <Compile Include="IPA\Config\Data\Text.cs" />
+    <Compile Include="IPA\Config\Data\Value.cs" />
+    <Compile Include="IPA\Config\IConfigProvider.cs" />
+    <Compile Include="IPA\Config\IConfigStore.cs" />
+    <Compile Include="IPA\Config\IModPrefs.cs" />
+    <Compile Include="IPA\Config\IniFile.cs" />
+    <Compile Include="IPA\Config\ModPrefs.cs" />
+    <Compile Include="IPA\Config\Providers\JsonConfigProvider.cs" />
+    <Compile Include="IPA\Config\SelfConfig.cs" />
+    <Compile Include="IPA\Config\Stores\Attributes\IgnoreAttribute.cs" />
+    <Compile Include="IPA\Config\Stores\Attributes\NonNullableAttribute.cs" />
+    <Compile Include="IPA\Config\Stores\Attributes\NotifyPropertyChangesAttribute.cs" />
+    <Compile Include="IPA\Config\Stores\Attributes\SerializedNameAttribute.cs" />
+    <Compile Include="IPA\Config\Stores\Attributes\UseConverterAttribute.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\BooleanConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\ByteConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\CaseInsensitiveEnumConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\CharConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\CollectionConverter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\CollectionConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\Converter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\Converter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\CustomObjectConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\CustomValueTypeConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\DecimalConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\DictionaryConverter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\DictionaryConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\DoubleConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\EnumConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\FloatConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\IDictionaryConverter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\IDictionaryConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\IListConverter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\IListConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\IntConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\IntPtrConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\IReadOnlyDictionaryConverter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\IReadOnlyDictionaryConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\ISetConverter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\ISetConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\ListConverter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\ListConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\LongConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\NullableConverter.2.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\NullableConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\NumericEnumConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\SByteConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\ShortConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\StringConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\UIntConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\UIntPtrConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\ULongConverter.cs" />
+    <Compile Include="IPA\Config\Stores\Converters\UShortConverter.cs" />
+    <Compile Include="IPA\Config\Stores\GeneratedStore.cs" />
+    <Compile Include="IPA\Config\Stores\GeneratedStoreImpl.cs" />
+    <Compile Include="IPA\Config\Stores\IValueConverter.cs" />
+    <Compile Include="IPA\Config\Stores\ValueConverter.cs" />
+    <Compile Include="IPA\EdgeLifecycleType.cs" />
+    <Compile Include="IPA\IEdgeLifecycleAttribute.cs" />
+    <Compile Include="IPA\InitAttribute.cs" />
+    <Compile Include="IPA\JsonConverters\AlmostVersionConverter.cs" />
+    <Compile Include="IPA\JsonConverters\MultilineStringConverter.cs" />
+    <Compile Include="IPA\JsonConverters\SemverRangeConverter.cs" />
+    <Compile Include="IPA\JsonConverters\SemverVersionConverter.cs" />
+    <Compile Include="IPA\Loader\CannotRuntimeDisableException.cs" />
+    <Compile Include="IPA\Loader\CecilLibLoader.cs" />
+    <Compile Include="IPA\Loader\Composite\CompositeBSPlugin.cs" />
+    <Compile Include="IPA\Loader\Composite\CompositeIPAPlugin.cs" />
+    <Compile Include="IPA\Loader\DisabledConfig.cs" />
+    <Compile Include="IPA\Loader\Features\ConfigProviderFeature.cs" />
+    <Compile Include="IPA\Loader\Features\DebugFeature.cs" />
+    <Compile Include="IPA\Loader\Features\DefineFeature.cs" />
+    <Compile Include="IPA\Loader\Features\Feature.cs" />
+    <Compile Include="IPA\Loader\Features\InitInjectorFeature.cs" />
+    <Compile Include="IPA\Loader\Features\NoUpdateFeature.cs" />
+    <Compile Include="IPA\Loader\Features\PrintFeature.cs" />
+    <Compile Include="IPA\Loader\Features\WarnFeature.cs" />
+    <Compile Include="IPA\Loader\HarmonyProtector.cs" />
+    <Compile Include="IPA\Loader\HarmonyProtectorProxy.cs" />
+    <Compile Include="IPA\Loader\IgnoreReason.cs" />
+    <Compile Include="IPA\Loader\LibLoader.cs" />
+    <Compile Include="IPA\Loader\PluginComponent.cs" />
+    <Compile Include="IPA\Loader\PluginExecutor.cs" />
+    <Compile Include="IPA\Loader\PluginInitInjector.cs" />
+    <Compile Include="IPA\Loader\PluginLoader.cs" />
+    <Compile Include="IPA\Loader\PluginManager.cs" />
+    <Compile Include="IPA\Loader\PluginManifest.cs" />
+    <Compile Include="IPA\Loader\PluginMetadata.cs" />
+    <Compile Include="IPA\Loader\Reason.cs" />
+    <Compile Include="IPA\Loader\StateTransitionTransaction.cs" />
+    <Compile Include="IPA\Logging\Logger.cs" />
+    <Compile Include="IPA\Logging\LoggerExtensions.cs" />
+    <Compile Include="IPA\Logging\LogPrinter.cs" />
+    <Compile Include="IPA\Logging\Printers\ColoredConsolePrinter.cs" />
+    <Compile Include="IPA\Logging\Printers\ColorlessConsolePrinter.cs" />
+    <Compile Include="IPA\Logging\Printers\GlobalLogFilePrinter.cs" />
+    <Compile Include="IPA\Logging\Printers\GZFilePrinter.cs" />
+    <Compile Include="IPA\Logging\Printers\PluginLogFilePrinter.cs" />
+    <Compile Include="IPA\Logging\Printers\PluginSubLogPrinter.cs" />
+    <Compile Include="IPA\Logging\StandardLogger.cs" />
+    <Compile Include="IPA\Logging\StdoutInterceptor.cs" />
+    <Compile Include="IPA\Logging\UnityLogProvider.cs" />
+    <Compile Include="IPA\Logging\UnityLogRedirector.cs" />
+    <Compile Include="IPA\Logging\WinConsole.cs" />
+    <Compile Include="IPA\Netvios\Config.cs" />
+    <Compile Include="IPA\Netvios\HttpClientHelper.cs" />
+    <Compile Include="IPA\Netvios\HttpGetParametersModel.cs" />
+    <Compile Include="IPA\Netvios\HttpPostParametersModel.cs" />
+    <Compile Include="IPA\Netvios\PluginsData.cs" />
+    <Compile Include="IPA\Netvios\PluginsInfo.cs" />
+    <Compile Include="IPA\Netvios\Utils.cs" />
+    <Compile Include="IPA\Old\IEnhancedPlugin.cs" />
+    <Compile Include="IPA\Old\IPlugin.cs" />
+    <Compile Include="IPA\OnDisableAttribute.cs" />
+    <Compile Include="IPA\OnEnableAttribute.cs" />
+    <Compile Include="IPA\OnExitAttribute.cs" />
+    <Compile Include="IPA\OnStartAttribute.cs" />
+    <Compile Include="IPA\PluginAttribute.cs" />
+    <Compile Include="IPA\RuntimeOptions.cs" />
+    <Compile Include="IPA\Updating\BeatMods\ApiEndpoint.cs" />
+    <Compile Include="IPA\Updating\BeatMods\BeatmodsInterceptException.cs" />
+    <Compile Include="IPA\Updating\BeatMods\NetworkException.cs" />
+    <Compile Include="IPA\Updating\BeatMods\Updater.cs" />
+    <Compile Include="IPA\Utilities\AccessorDelegateInfo.cs" />
+    <Compile Include="IPA\Utilities\AlmostVersion.cs" />
+    <Compile Include="IPA\Utilities\AlmostVersionConverter.cs" />
+    <Compile Include="IPA\Utilities\Async\Coroutines.cs" />
+    <Compile Include="IPA\Utilities\Async\SingleCreationValueCache.cs" />
+    <Compile Include="IPA\Utilities\Async\SingleThreadTaskScheduler.cs" />
+    <Compile Include="IPA\Utilities\Async\Synchronization.cs" />
+    <Compile Include="IPA\Utilities\Async\UnityMainThreadTaskScheduler.cs" />
+    <Compile Include="IPA\Utilities\CriticalSection.cs" />
+    <Compile Include="IPA\Utilities\EnumerableExtensions.cs" />
+    <Compile Include="IPA\Utilities\ExceptionUtilities.cs" />
+    <Compile Include="IPA\Utilities\Extensions.cs" />
+    <Compile Include="IPA\Utilities\FieldAccessor.cs" />
+    <Compile Include="IPA\Utilities\MethodAccessor.cs" />
+    <Compile Include="IPA\Utilities\PropertyAccessor.cs" />
+    <Compile Include="IPA\Utilities\Ref.2.cs" />
+    <Compile Include="IPA\Utilities\Ref.cs" />
+    <Compile Include="IPA\Utilities\ReflectionUtil.cs" />
+    <Compile Include="IPA\Utilities\UnityGame.cs" />
+    <Compile Include="IPA\Utilities\Utils.cs" />
+    <Compile Include="IPA\Utilities\Win32.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IPA\icon_white.png" />
+    <EmbeddedResource Include="IPA\Loader\description.md" />
+    <EmbeddedResource Include="IPA\Loader\manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\0Harmony\0Harmony.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff2e}</Project>
+      <Name>0Harmony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ionic.Zip\Ionic.Zip.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff34}</Project>
+      <Name>Ionic.Zip</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.CSharp\Microsoft.CSharp.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff27}</Project>
+      <Name>Microsoft.CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono.Cecil\Mono.Cecil.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff35}</Project>
+      <Name>Mono.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff49}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff39}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.System.ValueTuple\Portable.System.ValueTuple.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff28}</Project>
+      <Name>Portable.System.ValueTuple</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SemVer\SemVer.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3b}</Project>
+      <Name>SemVer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff4b}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

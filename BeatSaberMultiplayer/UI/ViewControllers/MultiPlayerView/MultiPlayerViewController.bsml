@@ -1,0 +1,6 @@
+﻿<stack vertical-fit='Unconstrained'>
+  <horizontal id='buttons-rect' horizontal-fit='PreferredSize' spacing='15'>
+    <big-button id='rooms-button' text='休闲对战' on-click='rooms-btn-pressed' icon='BeatSaberMultiplayer.Assets.RoomsIcon.png'/>
+    <big-button id='master-button' text='大师对战' on-click='master-btn-pressed' icon='BeatSaberMultiplayer.Assets.RadioIcon.png'/>
+  </horizontal>
+</stack>

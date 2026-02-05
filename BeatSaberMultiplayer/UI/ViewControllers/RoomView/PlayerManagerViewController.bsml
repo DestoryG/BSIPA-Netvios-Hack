@@ -1,0 +1,37 @@
+﻿<bg>
+  <vertical child-control-height='false' child-expand-height='false'>
+    <horizontal pad-top='12'>
+      <tab-selector tab-tag='settings-tab' />
+      <vertical horizontal-fit='PreferredSize' pad-left='20' pad-top='2'>
+        <text id='ping-text' text='Ping: 0ms' align='Center' />
+      </vertical>
+    </horizontal>
+
+    <tab tags='settings-tab' tab-name='玩家'>
+      <vertical pad='10' pad-top='5' child-control-height='false' child-expand-height='false' pref-width='130'>
+        <custom-list visible-cells='5' cell-size='10' id='players-list' contents='players' select-cell='player-selected'>
+          <horizontal horizontal-fit='PreferredSize' spacing='2'>
+            <raw-image id='voice-icon' pref-width='7'/>
+            <grid cell-size-y='9' cell-size-x='30' spacing-x='2' spacing-y='2' align='Left'>
+              <text text='~nickname' color='~nickname-color' hover-hint='~nickname' align='MidlineLeft' font-size='5' word-wrapping='false' overflow-mode='Masking'/>
+              <text id='progress-text' text='歌曲下载完毕' align='MidlineLeft' font-size='4' word-wrapping='false' overflow-mode='Masking'/>
+            </grid>
+            <button id='change-owner' text='移交房主' on-click='change-room-owner-pressed' font-size='3' pref-width='16' pref-height='8' word-wrapping='false'/>
+            <button id='kick-out' text='请出房间' on-click='kick-out-room-pressed' font-size='3' pref-width='16' pref-height='8' word-wrapping='false'/>
+          </horizontal>
+        </custom-list>
+        <text id='no-players-text' text='没有玩家进入房间' alignment='Center' font-size='6' />
+      </vertical>
+    </tab>
+
+    <tab tags='settings-tab' tab-name='规则设置'>
+      <vertical pad='10' pad-top='5' child-control-height='false' child-expand-height='false' pref-width='150'>
+        <bg id='modifiers-rect'/>
+        <!--<img id='modifiers-panel-blocker' src='#RoundRectPanel' anchor-min-x='0.042' anchor-max-x='0.958' size-delta-x='0' anchor-min-y='0.1525' anchor-max-y='0.7125' size-delta-y='0'>
+          <img src='BeatSaberMultiplayer.Assets.LockedRoom.png'/>
+        </img>-->
+      </vertical>
+    </tab>
+
+  </vertical>
+</bg>

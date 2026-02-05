@@ -1,0 +1,20 @@
+<horizontal>
+    <settings-container>
+        <bool-setting text="第一人称视角" value="visible-first-person-value" apply-on-change="true" on-change="visible-first-person-change"></bool-setting>
+        <list-setting text="模型调整" value="resize-value" apply-on-change="true" on-change="resize-change" options="resize-options" formatter="resize-mode-formatter"></list-setting>
+        <bool-setting text="地面高度调整" hover-hint="调整地面高度以便虚拟角色的脚是平的' feet are flat." value="floor-adjust-value" apply-on-change="true" on-change="floor-adjust-change"></bool-setting>
+        <horizontal pad-top="2">
+            <text text="臂展" font-size="5" align="Left"></text>
+            <text id="arm-span" font-size="5" align="Left"></text>
+            <button text="测量" on-click="measure-arm-span-click" hover-hint="为了达到最佳效果，将你的手臂向身体的两侧伸展，手柄的末端尽量向外(如果需要，可以转动你的手)"></button>
+        </horizontal>
+        <horizontal pad-top="8">
+            <text text="全身校准" font-size="5" align="Center"></text>
+        </horizontal>
+        <horizontal child-align="MiddleCenter" child-expand-width="true" child-control-width="true">
+            <button text="立即校准" hover-hint="校准全身跟踪，在你校准前确保你站得尽可能直" on-click="calibrate-fbt-click"></button>
+            <button text="清除" hover-hint="清除校准数据" on-click="clear-fbt-calibration-data-click"></button>
+        </horizontal>
+        <bool-setting text="开始时自动校准" value="calibrate-fbt-on-start" on-change="calibrate-fbt-on-start-change" hover-hint="在游戏开始前校准，请尽可能站直以便校准准确"></bool-setting>
+    </settings-container>
+</horizontal>

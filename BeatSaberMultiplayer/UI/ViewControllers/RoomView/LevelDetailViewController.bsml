@@ -1,0 +1,9 @@
+﻿<vertical vertical-fit="PreferredSize" spacing='2' pref-height='20'>
+  <horizontal spacing="2">
+    <button id="selectActionButton" interactable="~selectActionInteractable"  on-click="selectActionButtonPressed" text="确定" pad="4" pref-height='8' pref-width='25'></button>
+    <button id="startActionButton" interactable="~startActionInteractable"  on-click="startActionButtonPressed" text="开始" pad="4" pref-height='8' pref-width='25'></button>
+  </horizontal>
+  <horizontal horizontal-fit='PreferredSize'>
+    <text id='tip-text' text='游戏仍在进行中，请稍候' />
+  </horizontal>
+</vertical>

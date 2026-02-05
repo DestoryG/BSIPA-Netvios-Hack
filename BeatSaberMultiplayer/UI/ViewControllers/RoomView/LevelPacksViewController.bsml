@@ -1,0 +1,3 @@
+﻿<horizontal horizontal-fit='PreferredSize'>
+  <list id='packs-list-table' select-cell='pack-selected' list-style='Box' list-direction='Horizontal' visible-cells='5' cell-size='27' list-height='36'/>
+</horizontal>

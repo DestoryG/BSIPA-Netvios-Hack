@@ -1,0 +1,46 @@
+﻿<stack vertical-fit='Unconstrained' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+  <horizontal id='song-list-rect' horizontal-fit='PreferredSize'>
+    <vertical  vertical-fit='Unconstrained' horizontal-fit='PreferredSize' pref-width='115' pad-left='85' spacing='1'>
+      <stack>
+        <horizontal id='select-btns-rect' horizontal-fit='PreferredSize' spacing='1'>
+          <button text='更多' on-click='more-btn-pressed' active='~more-btn-active'/>
+          <button text='搜索' on-click='search-btn-pressed' interactable='false'/>
+          <button text='随机' on-click='random-btn-pressed' />
+        </horizontal>
+        <!--<horizontal id='sort-btns-rect' horizontal-fit='PreferredSize' spacing='1'>
+          <button text='默认' on-click='def-sort-btn-pressed' />
+          <button text='最新' on-click='new-sort-btn-pressed' />
+          <button id='diff-sort-btn' text='难度' on-click='diff-sort-btn-pressed' />
+        </horizontal>-->
+      </stack>
+      <vertical>
+        <horizontal spacing='-6'>
+          <pg-button dir='Up' pref-width='8' icon='BeatSaberMultiplayer.Assets.DoubleArrowIcon.png' on-click='fast-scroll-up-pressed' />
+          <pg-button dir='Up' click-event='song-list#PageUp'/>
+        </horizontal>
+        <list id='song-list' list-style='List' visible-cells='6' />
+        <horizontal spacing='-6'>
+          <pg-button dir='Down' pref-width='8' icon='BeatSaberMultiplayer.Assets.DoubleArrowIcon.png' on-click='fast-scroll-down-pressed' />
+          <pg-button dir='Down' click-event='song-list#PageDown'/>
+        </horizontal>
+      </vertical>
+    </vertical>
+
+    <!--<vertical vertical-fit='PreferredSize' spacing='4'>
+      <button text='更多歌曲' on-click='more-btn-pressed' active='~more-btn-active' pref-width='35'/>
+      <vertical id='player-requests-rect' vertical-fit='PreferredSize' spacing='2'>
+        <button text='用户确定' on-click='player-requests-pressed' pref-width='35'/>
+        <text text='~requests-text' alignment='Center' font-size='5'/>
+      </vertical>
+      <button id='request-song-btn' text='选择确定' on-click='request-song-pressed' pref-width='35'/>
+    </vertical>-->
+
+  </horizontal>
+
+  <!--<vertical id='host-selects-song-rect' spacing='4' vertical-fit='PreferredSize' pref-width='115' pad-left='85'>
+    <text text='房主正在选歌...' font-size='7.5' align='Center' />
+    --><!--<button text='选择歌曲' on-click='request-mode-pressed'/>--><!--
+  </vertical>-->
+
+  <modal-keyboard id='search-keyboard' value='search-value' clear-on-open='true' on-enter='search-pressed' hide-event='closeAllMPModals'/>
+</stack>

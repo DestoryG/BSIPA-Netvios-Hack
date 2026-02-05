@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BeatSaverDownloader</RootNamespace>
+    <AssemblyName>BeatSaverDownloader</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HMLib" />
+    <Reference Include="HMUI" />
+    <Reference Include="Main" />
+    <Reference Include="Polyglot" />
+    <Reference Include="Steamworks.NET" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Misc\CustomHelpers.cs" />
+    <Compile Include="Misc\FileOperationAPIWrapper.cs" />
+    <Compile Include="Misc\LoadScripts.cs" />
+    <Compile Include="Misc\PluginConfig.cs" />
+    <Compile Include="Misc\SongDownloader.cs" />
+    <Compile Include="Misc\Sprites.cs" />
+    <Compile Include="Misc\SteamHelper.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionUtil.cs" />
+    <Compile Include="SimpleJSON\JSON.cs" />
+    <Compile Include="SimpleJSON\JSONArray.cs" />
+    <Compile Include="SimpleJSON\JSONBool.cs" />
+    <Compile Include="SimpleJSON\JSONLazyCreator.cs" />
+    <Compile Include="SimpleJSON\JSONNode.cs" />
+    <Compile Include="SimpleJSON\JSONNodeType.cs" />
+    <Compile Include="SimpleJSON\JSONNull.cs" />
+    <Compile Include="SimpleJSON\JSONNumber.cs" />
+    <Compile Include="SimpleJSON\JSONObject.cs" />
+    <Compile Include="SimpleJSON\JSONString.cs" />
+    <Compile Include="SimpleJSON\JSONTextMode.cs" />
+    <Compile Include="SongQueueState.cs" />
+    <Compile Include="UI\MoreSongsFlowCoordinator.cs" />
+    <Compile Include="UI\PluginUI.cs" />
+    <Compile Include="UI\Settings.cs" />
+    <Compile Include="UI\ViewControllers\BeatSaverCustomSongCellInfo.cs" />
+    <Compile Include="UI\ViewControllers\DownloadQueueItem.cs" />
+    <Compile Include="UI\ViewControllers\DownloadQueueViewController.cs" />
+    <Compile Include="UI\ViewControllers\MoreSongsListViewController.cs" />
+    <Compile Include="UI\ViewControllers\MultiSelectDetailViewController.cs" />
+    <Compile Include="UI\ViewControllers\SongDescriptionViewController.cs" />
+    <Compile Include="UI\ViewControllers\SongDetailViewController.cs" />
+    <Compile Include="UI\ViewControllers\SortFilter.cs" />
+    <Compile Include="UI\ViewControllers\SortFilterCellInfo.cs" />
+    <Compile Include="UI\ViewControllers\SourceCellInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\AddToFavorites.png" />
+    <EmbeddedResource Include="Assets\BeastSaberLogo.png" />
+    <EmbeddedResource Include="Assets\BeatSaver.png" />
+    <EmbeddedResource Include="Assets\DeleteIcon.png" />
+    <EmbeddedResource Include="Assets\DoubleArrow.png" />
+    <EmbeddedResource Include="Assets\DownloadIcon.png" />
+    <EmbeddedResource Include="Assets\PlayIcon.png" />
+    <EmbeddedResource Include="Assets\PlaylistIcon.png" />
+    <EmbeddedResource Include="Assets\RandomIcon.png" />
+    <EmbeddedResource Include="Assets\RemoveFromFavorites.png" />
+    <EmbeddedResource Include="Assets\ReviewIcon.png" />
+    <EmbeddedResource Include="Assets\ScoreSaber.png" />
+    <EmbeddedResource Include="Assets\SongIcon.png" />
+    <EmbeddedResource Include="Assets\StarEmpty.png" />
+    <EmbeddedResource Include="Assets\StarFull.png" />
+    <EmbeddedResource Include="Assets\ThumbDown.png" />
+    <EmbeddedResource Include="Assets\ThumbUp.png" />
+    <EmbeddedResource Include="manifest.json" />
+    <EmbeddedResource Include="UI\BSML\downloadQueue.bsml" />
+    <EmbeddedResource Include="UI\BSML\moreSongsList.bsml" />
+    <EmbeddedResource Include="UI\BSML\multiSelectDetailView.bsml" />
+    <EmbeddedResource Include="UI\BSML\settings.bsml" />
+    <EmbeddedResource Include="UI\BSML\songDescription.bsml" />
+    <EmbeddedResource Include="UI\BSML\songDetail.bsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeatSaverSharp\BeatSaverSharp.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff2f}</Project>
+      <Name>BeatSaverSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BSML\BSML.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3f}</Project>
+      <Name>BSML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS_Utils\BS_Utils.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3e}</Project>
+      <Name>BS_Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPA.Loader\IPA.Loader.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff26}</Project>
+      <Name>IPA.Loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff49}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SongCore\SongCore.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff48}</Project>
+      <Name>SongCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff4b}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

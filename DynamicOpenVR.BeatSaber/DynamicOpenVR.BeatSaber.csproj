@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DynamicOpenVR.BeatSaber</RootNamespace>
+    <AssemblyName>DynamicOpenVR.BeatSaber</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HMLib" />
+    <Reference Include="Main" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.XRModule" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DialogResult.cs" />
+    <Compile Include="InputTrackingGetLocalPositionPatch.cs" />
+    <Compile Include="InputTrackingGetLocalRotationPatch.cs" />
+    <Compile Include="InputTrackingGetNodeStatesPatch.cs" />
+    <Compile Include="IPALogHandler.cs" />
+    <Compile Include="MenuButtonDownPatch.cs" />
+    <Compile Include="MenuButtonPatch.cs" />
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="MessageBoxButtons.cs" />
+    <Compile Include="MessageBoxIcon.cs" />
+    <Compile Include="MessageBoxType.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="OpenVREventHandler.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TriggerHapticPulsePatch.cs" />
+    <Compile Include="TriggerValuePatch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="manifest.json" />
+    <EmbeddedResource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\0Harmony\0Harmony.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff2e}</Project>
+      <Name>0Harmony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicOpenVR\DynamicOpenVR.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff31}</Project>
+      <Name>DynamicOpenVR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPA.Loader\IPA.Loader.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff26}</Project>
+      <Name>IPA.Loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff49}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff39}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

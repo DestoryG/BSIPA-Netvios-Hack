@@ -1,0 +1,17 @@
+﻿<vertical child-control-height='false'>
+  <horizontal bg='panel-top' pad-left='15' pad-right='15' horizontal-fit='PreferredSize'>
+    <text text='分数' align='Center' font-size='6'/>
+  </horizontal>
+  <horizontal>
+    <text id='update-time' text='~tiem-text' align='Center' font-size='8' font-color='red' />
+  </horizontal>
+  <horizontal spacing='10' bg='round-rect-panel' vertical-fit='PreferredSize' horizontal-fit='PreferredSize' child-align='UpperCenter'>
+    <custom-list visible-cells='5' cell-size='10' list-height='20' list-width='120' id='results-list' contents='results' select-cell='result-selected'>
+      <grid cell-size-y='9' cell-size-x='30' spacing-x='2' spacing-y='2' align='Center' pad='10'>
+        <text text='~rank' align='Center' font-size='5' word-wrapping='false' overflow-mode='Masking' />
+        <text text='~player-name' align='Center' font-size='5' word-wrapping='false' overflow-mode='Masking' />
+        <text text='~score' align='Center' font-size='5' word-wrapping='false' overflow-mode='Masking' />
+      </grid>
+    </custom-list>
+  </horizontal>
+</vertical>

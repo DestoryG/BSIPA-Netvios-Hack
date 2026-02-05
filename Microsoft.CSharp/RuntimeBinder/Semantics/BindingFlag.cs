@@ -1,0 +1,36 @@
+﻿using System;
+
+namespace Microsoft.CSharp.RuntimeBinder.Semantics
+{
+	// Token: 0x02000030 RID: 48
+	[Flags]
+	internal enum BindingFlag
+	{
+		// Token: 0x04000288 RID: 648
+		BIND_RVALUEREQUIRED = 1,
+		// Token: 0x04000289 RID: 649
+		BIND_MEMBERSET = 2,
+		// Token: 0x0400028A RID: 650
+		BIND_FIXEDVALUE = 16,
+		// Token: 0x0400028B RID: 651
+		BIND_ARGUMENTS = 32,
+		// Token: 0x0400028C RID: 652
+		BIND_BASECALL = 64,
+		// Token: 0x0400028D RID: 653
+		BIND_USINGVALUE = 128,
+		// Token: 0x0400028E RID: 654
+		BIND_STMTEXPRONLY = 256,
+		// Token: 0x0400028F RID: 655
+		BIND_TYPEOK = 512,
+		// Token: 0x04000290 RID: 656
+		BIND_MAYBECONFUSEDNEGATIVECAST = 1024,
+		// Token: 0x04000291 RID: 657
+		BIND_METHODNOTOK = 2048,
+		// Token: 0x04000292 RID: 658
+		BIND_DECLNOTOK = 4096,
+		// Token: 0x04000293 RID: 659
+		BIND_NOPARAMS = 8192,
+		// Token: 0x04000294 RID: 660
+		BIND_SPECULATIVELY = 16384
+	}
+}

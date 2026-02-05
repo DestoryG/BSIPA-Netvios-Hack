@@ -1,0 +1,13 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/beat-saber-modding-group/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "BeatSaberMultiplayer",
+  "name": "BeatSaberMultiplayer",
+  "author": "",
+  "version": "0.6.0",
+  "description": "",
+  "gameVersion": "1.9.0",
+  "dependsOn": {
+
+  },
+  "features": []
+}

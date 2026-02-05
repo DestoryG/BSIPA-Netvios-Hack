@@ -1,0 +1,18 @@
+﻿using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
+
+[assembly: AssemblyVersion("0.2.1.0")]
+[assembly: AssemblyTitle("DynamicOpenVR")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("DynamicOpenVR")]
+[assembly: AssemblyCopyright("Copyright © Nicolas Gnyra 2019-2020")]
+[assembly: AssemblyTrademark("")]
+[assembly: ComVisible(false)]
+[assembly: Guid("12b5ba1f-421f-4860-b27d-95a11a54e59d")]
+[assembly: AssemblyFileVersion("0.2.1.0")]

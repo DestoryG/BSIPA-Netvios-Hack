@@ -1,0 +1,3 @@
+﻿<settings-container>
+  <checkbox-setting text='切换设置' value='toggle1' hover-hint=''></checkbox-setting>
+</settings-container>

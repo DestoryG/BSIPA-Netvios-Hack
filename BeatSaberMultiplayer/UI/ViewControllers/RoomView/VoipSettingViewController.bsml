@@ -1,0 +1,13 @@
+﻿<vertical>
+  <horizontal bg='panel-top' pad-left='15' pad-right='15'>
+    <text text='语音设置' align='Center' font-size='6'/>
+  </horizontal>
+  <vertical pad='5' pad-top='0' child-control-height='false' child-expand-height='false' pref-width='100'>
+    <checkbox-setting text='启用语音聊天' value='custom-voice-enabled' apply-on-change='true' hover-hint='可以和房间的其他玩家语音对话'/>
+    <slider-setting text='播放语音音量' value='volume-adjust' min='0' max='1' increment='.1' apply-on-change='true' formatter='percent-formatter' hover-hint='增大或减小语音音量' />
+    <checkbox-setting text='启用麦克风' value='microphone-enabled'  apply-on-change='true' hover-hint='启用麦克风' />
+    <!--<list-setting text='麦克风控制' value='microphone-controller' options='microphone-controller-list' apply-on-change='true' hover-hint='麦克风控制'/>
+    <list-setting text='按键说话选项' value='microphone-open-record-key' options='microphone-open-record-key-list' apply-on-change='true' hover-hint='按键说话选项'/>-->
+    <list-setting text='麦克风选择' value='microphone-option' options='microphone-option-list' apply-on-change='true' hover-hint='麦克风选择' word-wrapping='true' overflow-mode='Truncate' on-change='change-micphone'/>
+  </vertical>
+</vertical>

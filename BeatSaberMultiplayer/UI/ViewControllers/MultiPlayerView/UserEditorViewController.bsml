@@ -1,0 +1,16 @@
+﻿<stack vertical-fit='Unconstrained'>
+  <vertical vertical-fit='Unconstrained'>
+    <horizontal bg='panel-top' pad-left='15' pad-right='15' horizontal-fit='PreferredSize'>
+      <text text='账号信息' align='Center' font-size='5'/>
+    </horizontal>
+    <horizontal pad-bottom='7'>
+      <text text='微信账号登录' italics='true' font-size='5' align='Left'/>
+      <text id='login-status-text' text='~login-status' italics='true' font-size='5' align='Center' apply-on-change='true'/>
+    </horizontal>
+    <string-setting id='nickname-keyboard' text='昵称：' value='nickname' apply-on-change='true' interactable='fasle' on-change='nickname-changed' />
+    <vertical child-expand-height='false'>
+      <text text='微信账号未登录，则不能参与大师对战，榜单歌曲的分数也不会上传' italics='true' font-size='3' align='Center' />
+      <text text='若想登录微信账号，请先退出游戏，在影核平台上扫描登录' italics='true' font-size='3' align='Center'/>
+    </vertical>
+  </vertical>
+</stack>

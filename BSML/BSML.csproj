@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BeatSaberMarkupLanguage</RootNamespace>
+    <AssemblyName>BSML</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HMLib" />
+    <Reference Include="HMUI" />
+    <Reference Include="Main" />
+    <Reference Include="Polyglot" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.TextRenderingModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+    <Reference Include="VRUI" />
+    <Reference Include="Zenject" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\AnimationController.cs" />
+    <Compile Include="Animations\AnimationControllerData.cs" />
+    <Compile Include="Animations\AnimationInfo.cs" />
+    <Compile Include="Animations\AnimationLoader.cs" />
+    <Compile Include="Animations\AnimationStateUpdater.cs" />
+    <Compile Include="Animations\AnimationType.cs" />
+    <Compile Include="Animations\APNGUnityDecoder.cs" />
+    <Compile Include="Animations\APNG\APNG.cs" />
+    <Compile Include="Animations\APNG\Chunks\acTLChunk.cs" />
+    <Compile Include="Animations\APNG\Chunks\BlendOps.cs" />
+    <Compile Include="Animations\APNG\Chunks\Chunk.cs" />
+    <Compile Include="Animations\APNG\Chunks\DisposeOps.cs" />
+    <Compile Include="Animations\APNG\Chunks\fcTLChunk.cs" />
+    <Compile Include="Animations\APNG\Chunks\fdATChunk.cs" />
+    <Compile Include="Animations\APNG\Chunks\IDATChunk.cs" />
+    <Compile Include="Animations\APNG\Chunks\IENDChunk.cs" />
+    <Compile Include="Animations\APNG\Chunks\IHDRChunk.cs" />
+    <Compile Include="Animations\APNG\Chunks\OtherChunk.cs" />
+    <Compile Include="Animations\CrcHelper.cs" />
+    <Compile Include="Animations\Frame.cs" />
+    <Compile Include="Animations\FrameInfo.cs" />
+    <Compile Include="Animations\GIFUnityDecoder.cs" />
+    <Compile Include="Animations\Helper.cs" />
+    <Compile Include="Animations\IAnimatedImage.cs" />
+    <Compile Include="Animations\LockBitmap.cs" />
+    <Compile Include="Animations\StreamExtensions.cs" />
+    <Compile Include="Attributes\HotReloadAttribute.cs" />
+    <Compile Include="Attributes\UIAction.cs" />
+    <Compile Include="Attributes\UIComponent.cs" />
+    <Compile Include="Attributes\UIObject.cs" />
+    <Compile Include="Attributes\UIParams.cs" />
+    <Compile Include="Attributes\UIValue.cs" />
+    <Compile Include="Attributes\ViewDefinitionAttribute.cs" />
+    <Compile Include="BeatSaberUI.cs" />
+    <Compile Include="BSMLParser.cs" />
+    <Compile Include="Components\Backgroundable.cs" />
+    <Compile Include="Components\BSMLScrollableContainer.cs" />
+    <Compile Include="Components\BSMLScrollIndicator.cs" />
+    <Compile Include="Components\BSMLScrollView.cs" />
+    <Compile Include="Components\BSMLTableView.cs" />
+    <Compile Include="Components\ButtonArtworkImage.cs" />
+    <Compile Include="Components\ButtonIconImage.cs" />
+    <Compile Include="Components\ClickableImage.cs" />
+    <Compile Include="Components\ClickableText.cs" />
+    <Compile Include="Components\CustomCellListTableData.cs" />
+    <Compile Include="Components\CustomCellTableCell.cs" />
+    <Compile Include="Components\CustomListTableData.cs" />
+    <Compile Include="Components\ExternalComponents.cs" />
+    <Compile Include="Components\Glowable.cs" />
+    <Compile Include="Components\KEYBOARD.cs" />
+    <Compile Include="Components\ModalColorPicker.cs" />
+    <Compile Include="Components\ModalKeyboard.cs" />
+    <Compile Include="Components\NotifiableSingleton.cs" />
+    <Compile Include="Components\NotifyUpdater.cs" />
+    <Compile Include="Components\PageButton.cs" />
+    <Compile Include="Components\ScrollViewContent.cs" />
+    <Compile Include="Components\Settings\BoolSetting.cs" />
+    <Compile Include="Components\Settings\CheckboxSetting.cs" />
+    <Compile Include="Components\Settings\ColorSetting.cs" />
+    <Compile Include="Components\Settings\DropDownListSetting.cs" />
+    <Compile Include="Components\Settings\GenericSetting.cs" />
+    <Compile Include="Components\Settings\GenericSliderSetting.cs" />
+    <Compile Include="Components\Settings\IncDecSetting.cs" />
+    <Compile Include="Components\Settings\IncrementSetting.cs" />
+    <Compile Include="Components\Settings\ListSetting.cs" />
+    <Compile Include="Components\Settings\ListSliderSetting.cs" />
+    <Compile Include="Components\Settings\SliderSetting.cs" />
+    <Compile Include="Components\Settings\StringSetting.cs" />
+    <Compile Include="Components\Strokable.cs" />
+    <Compile Include="Components\Tab.cs" />
+    <Compile Include="Components\TabSelector.cs" />
+    <Compile Include="Components\TextPageScrollViewRefresher.cs" />
+    <Compile Include="DismissFlowCoordinatorDelegate.cs" />
+    <Compile Include="FloatingScreen\FloatingScreen.cs" />
+    <Compile Include="FloatingScreen\FloatingScreenMoverPointer.cs" />
+    <Compile Include="FontManager.cs" />
+    <Compile Include="GameplaySetupTest.cs" />
+    <Compile Include="GameplaySetup\GameplaySetup.cs" />
+    <Compile Include="GameplaySetup\GameplaySetupMenu.cs" />
+    <Compile Include="Harmony_Patches\SegmentedControlCellSelectionStateDidChange.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Macros\AsHostMacro.cs" />
+    <Compile Include="Macros\BSMLMacro.cs" />
+    <Compile Include="Macros\DefineMacro.cs" />
+    <Compile Include="Macros\ForEachMacro.cs" />
+    <Compile Include="Macros\IfMacro.cs" />
+    <Compile Include="Macros\ReparentMacro.cs" />
+    <Compile Include="MenuButtons\MenuButton.cs" />
+    <Compile Include="MenuButtons\MenuButtons.cs" />
+    <Compile Include="MenuButtons\MenuPins.cs" />
+    <Compile Include="MenuButtons\PinnedMod.cs" />
+    <Compile Include="Notify\INotifiableHost.cs" />
+    <Compile Include="Notify\PropertyChangedEventArgs.cs" />
+    <Compile Include="Notify\PropertyChangedEventHandler.cs" />
+    <Compile Include="OpenType\CollectionHeader.cs" />
+    <Compile Include="OpenType\NumericHelpers.cs" />
+    <Compile Include="OpenType\OffsetTable.cs" />
+    <Compile Include="OpenType\OpenTypeCollection.cs" />
+    <Compile Include="OpenType\OpenTypeCollectionReader.cs" />
+    <Compile Include="OpenType\OpenTypeFont.cs" />
+    <Compile Include="OpenType\OpenTypeFontReader.cs" />
+    <Compile Include="OpenType\OpenTypeNameTable.cs" />
+    <Compile Include="OpenType\OpenTypeReader.cs" />
+    <Compile Include="OpenType\OpenTypeTable.cs" />
+    <Compile Include="OpenType\OpenTypeTag.cs" />
+    <Compile Include="OpenType\TableRecord.cs" />
+    <Compile Include="Parse.cs" />
+    <Compile Include="Parser\BSMLAction.cs" />
+    <Compile Include="Parser\BSMLFieldValue.cs" />
+    <Compile Include="Parser\BSMLParserParams.cs" />
+    <Compile Include="Parser\BSMLPropertyValue.cs" />
+    <Compile Include="Parser\BSMLStringValue.cs" />
+    <Compile Include="Parser\BSMLValue.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="PresentFlowCoordinatorDelegate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsTest.cs" />
+    <Compile Include="Settings\BSMLSettings.cs" />
+    <Compile Include="Settings\ModSettingsFlowCoordinator.cs" />
+    <Compile Include="Settings\SettingsMenu.cs" />
+    <Compile Include="Settings\UI\ViewControllers\SettingsMenuListViewController.cs" />
+    <Compile Include="Tags\BackgroundTag.cs" />
+    <Compile Include="Tags\BigButtonTag.cs" />
+    <Compile Include="Tags\BottomButtonPanelTag.cs" />
+    <Compile Include="Tags\BSMLTag.cs" />
+    <Compile Include="Tags\ButtonTag.cs" />
+    <Compile Include="Tags\ButtonWithIconTag.cs" />
+    <Compile Include="Tags\ClickableImageTag.cs" />
+    <Compile Include="Tags\ClickableTextTag.cs" />
+    <Compile Include="Tags\CustomListTag.cs" />
+    <Compile Include="Tags\GridLayoutTag.cs" />
+    <Compile Include="Tags\HorizontalLayoutTag.cs" />
+    <Compile Include="Tags\IconSegmentedControlTag.cs" />
+    <Compile Include="Tags\ImageTag.cs" />
+    <Compile Include="Tags\LeaderboardTag.cs" />
+    <Compile Include="Tags\ListTag.cs" />
+    <Compile Include="Tags\LoadingIndicatorTag.cs" />
+    <Compile Include="Tags\ModalColorPickerTag.cs" />
+    <Compile Include="Tags\ModalKeyboardTag.cs" />
+    <Compile Include="Tags\ModalTag.cs" />
+    <Compile Include="Tags\ModifierContainerTag.cs" />
+    <Compile Include="Tags\ModifierTag.cs" />
+    <Compile Include="Tags\PageButtonTag.cs" />
+    <Compile Include="Tags\RawImageTag.cs" />
+    <Compile Include="Tags\ScrollableContainerTag.cs" />
+    <Compile Include="Tags\ScrollableSettingsContainerTag.cs" />
+    <Compile Include="Tags\ScrollIndicatorTag.cs" />
+    <Compile Include="Tags\ScrollViewTag.cs" />
+    <Compile Include="Tags\SettingsContainerTag.cs" />
+    <Compile Include="Tags\Settings\BoolSettingTag.cs" />
+    <Compile Include="Tags\Settings\CheckboxSettingTag.cs" />
+    <Compile Include="Tags\Settings\ColorSettingTag.cs" />
+    <Compile Include="Tags\Settings\DropdownListSettingTag.cs" />
+    <Compile Include="Tags\Settings\GenericSliderSettingTag.cs" />
+    <Compile Include="Tags\Settings\IncDecSettingTag.cs" />
+    <Compile Include="Tags\Settings\IncrementSettingTag.cs" />
+    <Compile Include="Tags\Settings\ListSettingTag.cs" />
+    <Compile Include="Tags\Settings\ListSliderSettingTag.cs" />
+    <Compile Include="Tags\Settings\SliderSettingTag.cs" />
+    <Compile Include="Tags\Settings\StringSettingTag.cs" />
+    <Compile Include="Tags\Settings\SubmenuTag.cs" />
+    <Compile Include="Tags\StackLayoutTag.cs" />
+    <Compile Include="Tags\TabSelectorTag.cs" />
+    <Compile Include="Tags\TabTag.cs" />
+    <Compile Include="Tags\TextPageScrollViewTag.cs" />
+    <Compile Include="Tags\TextSegmentedControlTag.cs" />
+    <Compile Include="Tags\TextTag.cs" />
+    <Compile Include="Tags\VerticalLayoutTag.cs" />
+    <Compile Include="TypeHandlers\BackgroundableHandler.cs" />
+    <Compile Include="TypeHandlers\BSMLScrollViewHandler.cs" />
+    <Compile Include="TypeHandlers\ButtonArtworkHandler.cs" />
+    <Compile Include="TypeHandlers\ButtonHandler.cs" />
+    <Compile Include="TypeHandlers\ButtonIconHandler.cs" />
+    <Compile Include="TypeHandlers\ClickableImageHandler.cs" />
+    <Compile Include="TypeHandlers\ClickableTextHandler.cs" />
+    <Compile Include="TypeHandlers\ComponentHandler.cs" />
+    <Compile Include="TypeHandlers\ContentSizeFitterHandler.cs" />
+    <Compile Include="TypeHandlers\CustomCellListTableDataHandler.cs" />
+    <Compile Include="TypeHandlers\CustomListTableDataHandler.cs" />
+    <Compile Include="TypeHandlers\GlowableHandler.cs" />
+    <Compile Include="TypeHandlers\GridLayoutGroupHandler.cs" />
+    <Compile Include="TypeHandlers\HorizontalOrVerticalLayoutGroupHandler.cs" />
+    <Compile Include="TypeHandlers\IconSegmentedControlHandler.cs" />
+    <Compile Include="TypeHandlers\ImageHandler.cs" />
+    <Compile Include="TypeHandlers\LayoutElementHandler.cs" />
+    <Compile Include="TypeHandlers\LayoutGroupHandler.cs" />
+    <Compile Include="TypeHandlers\LeaderboardHandler.cs" />
+    <Compile Include="TypeHandlers\ModalColorPickerHandler.cs" />
+    <Compile Include="TypeHandlers\ModalKeyboardHandler.cs" />
+    <Compile Include="TypeHandlers\ModalViewHandler.cs" />
+    <Compile Include="TypeHandlers\PageButtonHandler.cs" />
+    <Compile Include="TypeHandlers\RawImageHandler.cs" />
+    <Compile Include="TypeHandlers\RectTransformHandler.cs" />
+    <Compile Include="TypeHandlers\ScrollableContainerHandler.cs" />
+    <Compile Include="TypeHandlers\ScrollIndicatorHandler.cs" />
+    <Compile Include="TypeHandlers\Settings\DropDownListSettingHandler.cs" />
+    <Compile Include="TypeHandlers\Settings\GenericSettingHandler.cs" />
+    <Compile Include="TypeHandlers\Settings\IncrementSettingHandler.cs" />
+    <Compile Include="TypeHandlers\Settings\ListSettingHandler.cs" />
+    <Compile Include="TypeHandlers\Settings\ListSliderSettingHandler.cs" />
+    <Compile Include="TypeHandlers\Settings\SliderSettingHandler.cs" />
+    <Compile Include="TypeHandlers\StrokableHandler.cs" />
+    <Compile Include="TypeHandlers\TabHandler.cs" />
+    <Compile Include="TypeHandlers\TabSelectorHandler.cs" />
+    <Compile Include="TypeHandlers\TextMeshProUGUIHandler.cs" />
+    <Compile Include="TypeHandlers\TextPageScrollViewHandler.cs" />
+    <Compile Include="TypeHandlers\TextSegmentedControlHandler.cs" />
+    <Compile Include="TypeHandlers\TypeHandler.2.cs" />
+    <Compile Include="TypeHandlers\TypeHandler.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="ViewControllers\BSMLAutomaticViewController.cs" />
+    <Compile Include="ViewControllers\BSMLResourceViewController.cs" />
+    <Compile Include="ViewControllers\BSMLViewController.cs" />
+    <Compile Include="ViewControllers\HotReloadableViewController.cs" />
+    <Compile Include="ViewControllers\TestListObject.cs" />
+    <Compile Include="ViewControllers\TestViewController.cs" />
+    <Compile Include="ViewControllers\WatcherGroup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="manifest.json" />
+    <EmbeddedResource Include="Resources\description.md" />
+    <EmbeddedResource Include="Resources\icon.png" />
+    <EmbeddedResource Include="Resources\loading.apng" />
+    <EmbeddedResource Include="Views\gameplay-setup-test.bsml" />
+    <EmbeddedResource Include="Views\gameplay-setup.bsml" />
+    <EmbeddedResource Include="Views\main-left-screen.bsml" />
+    <EmbeddedResource Include="Views\main-menu-screen.bsml" />
+    <EmbeddedResource Include="Views\settings-about.bsml" />
+    <EmbeddedResource Include="Views\settings-buttons.bsml" />
+    <EmbeddedResource Include="Views\settings-list.bsml" />
+    <EmbeddedResource Include="Views\settings-test.bsml" />
+    <EmbeddedResource Include="Views\test.bsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\0Harmony\0Harmony.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff2e}</Project>
+      <Name>0Harmony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS_Utils\BS_Utils.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3e}</Project>
+      <Name>BS_Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPA.Loader\IPA.Loader.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff26}</Project>
+      <Name>IPA.Loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff49}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff4b}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

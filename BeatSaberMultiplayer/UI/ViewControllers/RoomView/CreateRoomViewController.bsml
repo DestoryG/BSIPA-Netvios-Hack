@@ -1,0 +1,17 @@
+﻿<stack vertical-fit='Unconstrained'>
+  <vertical vertical-fit='Unconstrained'>
+    <string-setting id='room-name-keyboard' text='房间名称：' value='room-name' on-change='room-name-changed' />
+    <string-setting id='password-keyboard' text='房间密码：' value ='room-password' on-change='room-password-changed'/>
+    <!--<checkbox text='启用密码：' value='use-password' apply-on-change='true'/>-->
+    <!--<dropdown-list-setting text='歌曲选择：' options='song-selection-options' value='song-selection-type' apply-on-change='true'/>-->
+    <slider-setting text='最大玩家数：' min='1' max='4' increment='1' integer-only='true' value='max-players' formatter='max-players-format' apply-on-change='true'/>
+    <slider-setting text='结果显示时间：' min='4' max='20' increment='1' integer-only='true' value='results-show-time' apply-on-change='true'/>
+    <!--<checkbox text='玩家难度能否自定义：' value='per-player-difficulty' apply-on-change='true'/>-->
+    <horizontal>
+      <!--<button text='保存预设' on-click='save-preset-btn-pressed'/>-->
+      <!--<modal-keyboard id='preset-name-keyboard' on-enter='preset-name-entered' hide-event='closeAllMPModals'/>-->
+      <button text='创建房间' id='create-room-btn' on-click='create-room-btn-pressed'/>
+      <!--<button text='加载预设' on-click='load-preset-btn-pressed'/>-->
+    </horizontal>
+  </vertical>
+</stack>

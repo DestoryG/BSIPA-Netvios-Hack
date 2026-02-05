@@ -1,0 +1,147 @@
+﻿using System;
+
+namespace Microsoft.CSharp.RuntimeBinder.Syntax
+{
+	// Token: 0x02000027 RID: 39
+	internal enum OperatorKind : uint
+	{
+		// Token: 0x0400012B RID: 299
+		OP_NONE,
+		// Token: 0x0400012C RID: 300
+		OP_ASSIGN,
+		// Token: 0x0400012D RID: 301
+		OP_ADDEQ,
+		// Token: 0x0400012E RID: 302
+		OP_SUBEQ,
+		// Token: 0x0400012F RID: 303
+		OP_MULEQ,
+		// Token: 0x04000130 RID: 304
+		OP_DIVEQ,
+		// Token: 0x04000131 RID: 305
+		OP_MODEQ,
+		// Token: 0x04000132 RID: 306
+		OP_ANDEQ,
+		// Token: 0x04000133 RID: 307
+		OP_XOREQ,
+		// Token: 0x04000134 RID: 308
+		OP_OREQ,
+		// Token: 0x04000135 RID: 309
+		OP_LSHIFTEQ,
+		// Token: 0x04000136 RID: 310
+		OP_RSHIFTEQ,
+		// Token: 0x04000137 RID: 311
+		OP_QUESTION,
+		// Token: 0x04000138 RID: 312
+		OP_VALORDEF,
+		// Token: 0x04000139 RID: 313
+		OP_LOGOR,
+		// Token: 0x0400013A RID: 314
+		OP_LOGAND,
+		// Token: 0x0400013B RID: 315
+		OP_BITOR,
+		// Token: 0x0400013C RID: 316
+		OP_BITXOR,
+		// Token: 0x0400013D RID: 317
+		OP_BITAND,
+		// Token: 0x0400013E RID: 318
+		OP_EQ,
+		// Token: 0x0400013F RID: 319
+		OP_NEQ,
+		// Token: 0x04000140 RID: 320
+		OP_LT,
+		// Token: 0x04000141 RID: 321
+		OP_LE,
+		// Token: 0x04000142 RID: 322
+		OP_GT,
+		// Token: 0x04000143 RID: 323
+		OP_GE,
+		// Token: 0x04000144 RID: 324
+		OP_IS,
+		// Token: 0x04000145 RID: 325
+		OP_AS,
+		// Token: 0x04000146 RID: 326
+		OP_LSHIFT,
+		// Token: 0x04000147 RID: 327
+		OP_RSHIFT,
+		// Token: 0x04000148 RID: 328
+		OP_ADD,
+		// Token: 0x04000149 RID: 329
+		OP_SUB,
+		// Token: 0x0400014A RID: 330
+		OP_MUL,
+		// Token: 0x0400014B RID: 331
+		OP_DIV,
+		// Token: 0x0400014C RID: 332
+		OP_MOD,
+		// Token: 0x0400014D RID: 333
+		OP_NOP,
+		// Token: 0x0400014E RID: 334
+		OP_UPLUS,
+		// Token: 0x0400014F RID: 335
+		OP_NEG,
+		// Token: 0x04000150 RID: 336
+		OP_BITNOT,
+		// Token: 0x04000151 RID: 337
+		OP_LOGNOT,
+		// Token: 0x04000152 RID: 338
+		OP_PREINC,
+		// Token: 0x04000153 RID: 339
+		OP_PREDEC,
+		// Token: 0x04000154 RID: 340
+		OP_TYPEOF,
+		// Token: 0x04000155 RID: 341
+		OP_CHECKED,
+		// Token: 0x04000156 RID: 342
+		OP_UNCHECKED,
+		// Token: 0x04000157 RID: 343
+		OP_MAKEREFANY,
+		// Token: 0x04000158 RID: 344
+		OP_REFVALUE,
+		// Token: 0x04000159 RID: 345
+		OP_REFTYPE,
+		// Token: 0x0400015A RID: 346
+		OP_ARGS,
+		// Token: 0x0400015B RID: 347
+		OP_CAST,
+		// Token: 0x0400015C RID: 348
+		OP_INDIR,
+		// Token: 0x0400015D RID: 349
+		OP_ADDR,
+		// Token: 0x0400015E RID: 350
+		OP_COLON,
+		// Token: 0x0400015F RID: 351
+		OP_THIS,
+		// Token: 0x04000160 RID: 352
+		OP_BASE,
+		// Token: 0x04000161 RID: 353
+		OP_NULL,
+		// Token: 0x04000162 RID: 354
+		OP_TRUE,
+		// Token: 0x04000163 RID: 355
+		OP_FALSE,
+		// Token: 0x04000164 RID: 356
+		OP_CALL,
+		// Token: 0x04000165 RID: 357
+		OP_DEREF,
+		// Token: 0x04000166 RID: 358
+		OP_PAREN,
+		// Token: 0x04000167 RID: 359
+		OP_POSTINC,
+		// Token: 0x04000168 RID: 360
+		OP_POSTDEC,
+		// Token: 0x04000169 RID: 361
+		OP_DOT,
+		// Token: 0x0400016A RID: 362
+		OP_IMPLICIT,
+		// Token: 0x0400016B RID: 363
+		OP_EXPLICIT,
+		// Token: 0x0400016C RID: 364
+		OP_EQUALS,
+		// Token: 0x0400016D RID: 365
+		OP_COMPARE,
+		// Token: 0x0400016E RID: 366
+		OP_DEFAULT,
+		// Token: 0x0400016F RID: 367
+		OP_LAST
+	}
+}

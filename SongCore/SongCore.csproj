@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA974F0-E855-47CF-BEDC-260F4FBEFF48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SongCore</RootNamespace>
+    <AssemblyName>SongCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Colors" />
+    <Reference Include="HMLib" />
+    <Reference Include="HMUI" />
+    <Reference Include="Main" />
+    <Reference Include="MediaLoader" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="Data\ExtraSongData.cs" />
+    <Compile Include="Data\FolderLevelPack.cs" />
+    <Compile Include="Data\ModSeperateSongFolder.cs" />
+    <Compile Include="Data\SeperateSongFolder.cs" />
+    <Compile Include="Data\SongFolderEntry.cs" />
+    <Compile Include="Data\SongHashData.cs" />
+    <Compile Include="HarmonyPatches\AprilFoolsPatch.cs" />
+    <Compile Include="HarmonyPatches\BeatmapDataLoaderGetBeatmapDataFromBeatmapSaveData.cs" />
+    <Compile Include="HarmonyPatches\BeatmapDifficultyMethodsName.cs" />
+    <Compile Include="HarmonyPatches\CustomCharacteristicsPatch.cs" />
+    <Compile Include="HarmonyPatches\LevelPackLevelsSelectedPatch.cs" />
+    <Compile Include="HarmonyPatches\LevelSelectionFlowCoordinatorStartLevelPatch.cs" />
+    <Compile Include="HarmonyPatches\SceneTransitionPatch.cs" />
+    <Compile Include="HarmonyPatches\StandardLevelDetailViewRefreshContent.cs" />
+    <Compile Include="HarmonyPatches\StopVanillaLoadingPatch.cs" />
+    <Compile Include="HarmonyPatches\StopVanillaLoadingPatch2.cs" />
+    <Compile Include="HarmonyPatches\StopVanillaLoadingPatch3.cs" />
+    <Compile Include="LevelListTableCellSetDataFromLevel.cs" />
+    <Compile Include="LevelSelectionHidePracticeButton.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="NetviosConfig.cs" />
+    <Compile Include="OverrideClasses\SongCoreBeatmapLevelPackCollectionSO.cs" />
+    <Compile Include="OverrideClasses\SongCoreCustomBeatmapLevelPack.cs" />
+    <Compile Include="OverrideClasses\SongCoreCustomLevelCollection.cs" />
+    <Compile Include="OverrideClasses\SongCoreOstBeatmapLevelPackCollectionSO.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="ProgressBar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleJSON\JSON.cs" />
+    <Compile Include="SimpleJSON\JSONArray.cs" />
+    <Compile Include="SimpleJSON\JSONBool.cs" />
+    <Compile Include="SimpleJSON\JSONLazyCreator.cs" />
+    <Compile Include="SimpleJSON\JSONNode.cs" />
+    <Compile Include="SimpleJSON\JSONNodeType.cs" />
+    <Compile Include="SimpleJSON\JSONNull.cs" />
+    <Compile Include="SimpleJSON\JSONNumber.cs" />
+    <Compile Include="SimpleJSON\JSONObject.cs" />
+    <Compile Include="SimpleJSON\JSONString.cs" />
+    <Compile Include="SimpleJSON\JSONTextMode.cs" />
+    <Compile Include="UI\BasicUI.cs" />
+    <Compile Include="UI\RequirementsUI.cs" />
+    <Compile Include="UI\SCSettings.cs" />
+    <Compile Include="Utilities\Hashing.cs" />
+    <Compile Include="Utilities\HSBColor.cs" />
+    <Compile Include="Utilities\Logging.cs" />
+    <Compile Include="Utilities\ReflectionUtil.cs" />
+    <Compile Include="Utilities\Unzip.cs" />
+    <Compile Include="Utilities\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\folders.xml" />
+    <EmbeddedResource Include="Icons\Download.png" />
+    <EmbeddedResource Include="Icons\ExtraDiffsIcon.png" />
+    <EmbeddedResource Include="Icons\FolderIcon.png" />
+    <EmbeddedResource Include="Icons\GreenCheck.png" />
+    <EmbeddedResource Include="Icons\Info.png" />
+    <EmbeddedResource Include="Icons\Lightshow.png" />
+    <EmbeddedResource Include="Icons\MissingChar.png" />
+    <EmbeddedResource Include="Icons\RedX.png" />
+    <EmbeddedResource Include="Icons\squek.png" />
+    <EmbeddedResource Include="Icons\Warning.png" />
+    <EmbeddedResource Include="Icons\YellowCheck.png" />
+    <EmbeddedResource Include="Icons\YellowX.png" />
+    <EmbeddedResource Include="manifest.json" />
+    <EmbeddedResource Include="UI\requirements.bsml" />
+    <EmbeddedResource Include="UI\settings.bsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\0Harmony\0Harmony.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff2e}</Project>
+      <Name>0Harmony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BSML\BSML.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3f}</Project>
+      <Name>BSML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS_Utils\BS_Utils.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff3e}</Project>
+      <Name>BS_Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPA.Loader\IPA.Loader.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff26}</Project>
+      <Name>IPA.Loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff49}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff39}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{7aa974f0-e855-47cf-bedc-260f4fbeff4b}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
