@@ -6,37 +6,40 @@ But did you know that Beat Games once collaborated with a Chinese game developer
 
 So, there it is.
 
-<img width="1919" height="991" alt="CNBeatSaber" src="https://gist.github.com/user-attachments/assets/304b6c37-dff7-44e4-be83-870c62e8cbaa" />
+<img width="1919" height="991" alt="545327720-304b6c37-dff7-44e4-be83-870c62e8cbaa" src="https://github.com/user-attachments/assets/673f8144-04a7-416e-9554-cb2981017a33" />
+
 
 This version of Beat Saber called "节奏空间(Beat Space ?)". It's a product of a collaboration between Beat Games and the Chinese game company Netease, whose representative games include Identity V (very popular in China and Japan), Marvel Rivals, and Naraka Bladepoint. But the last update seems to have been in 2022? Well, at least we might get a new UI.
 
-<img width="1230" height="786" alt="QQ20260205-102831" src="https://gist.github.com/user-attachments/assets/9cceac83-4600-4e1a-9fc3-b7c675f31180" />
+<img width="1230" height="786" alt="545329231-9cceac83-4600-4e1a-9fc3-b7c675f31180" src="https://github.com/user-attachments/assets/77c53fae-d082-47d6-941b-b4634e2c28e3" />
+
 
 Anyway, we need to download this and research it carefully, but, this is a real shock right from the start: We can't download the game directly; it seems we have to download a game platform called "Netvios"? Let's see.
 
-<img width="1919" height="944" alt="eff11c14-e65f-4f2f-9060-6bbb963b1743" src="https://gist.github.com/user-attachments/assets/25eacee4-5707-4381-adf3-02527d26598d" />
+<img width="1919" height="944" alt="25eacee4-5707-4381-adf3-02527d26598d" src="https://github.com/user-attachments/assets/769f000d-393c-4c2c-8cfe-c766c06cf33c" />
+
 
 After I registered an account using my mobile phone number (this is the only way to register), this thing seemed to take me to a "store registration" page. Oh, so this is for those game arcade room with VR? However, they did say that if you are a personal user, you only need to fill in "personal" in the store name.
 
-<img width="1919" height="1032" alt="image" src="https://gist.github.com/user-attachments/assets/c44e1039-b831-4cce-9571-ffe83ff20699" />
+<img width="1919" height="1032" alt="c44e1039-b831-4cce-9571-ffe83ff20699" src="https://github.com/user-attachments/assets/394045df-2ea9-49ea-a458-d7501d20a626" />
 
 So after doing all that, I can finally download this mysterious Beat Saber version!
 
-<img width="1919" height="1019" alt="image" src="https://gist.github.com/user-attachments/assets/4e24d161-f23a-447e-be90-b3680feab74a" />
+<img width="1919" height="1019" alt="4e24d161-f23a-447e-be90-b3680feab74a" src="https://github.com/user-attachments/assets/563613fd-c01d-4a48-ab49-b67904dc02b9" />
 
 Before we start the game, let’s take a look at the game itself. Well, at first glance, it’s just a Beat Saber with BSIPA and some plugins? You know, BSIPA uses the MIT license, which doesn't restrict you from redistributing it as a binary file or using it for commercial purposes, right? and a DLL file called NetviosSDK that looks like DRM.
 
-<img width="393" height="679" alt="image" src="https://gist.github.com/user-attachments/assets/a26f597c-1a53-4d11-b699-762c8774345d" />
+<img width="393" height="679" alt="a26f597c-1a53-4d11-b699-762c8774345d" src="https://github.com/user-attachments/assets/8ed22c4b-6f60-42c4-b572-9441912b6e80" />
 
 Before that, I wanted to check if they truly respected the MIT license. It's simple enough, just put a MIT license here, and I quickly found the MIT license files for all the MIT modules in Plugins\licenses, but... BSIPA's weren't there. I looked everywhere, but I couldn't find it, which basically constitutes a violation of MIT. Um... okay? After all, they put the MIT licenses for all the other modules there, so at least we can assume they forgot.
 
-<img width="253" height="364" alt="QQ20260205-111230" src="https://gist.github.com/user-attachments/assets/0689e84a-31c7-42af-bdb8-2f81c577f570" />
+<img width="253" height="364" alt="0689e84a-31c7-42af-bdb8-2f81c577f570" src="https://github.com/user-attachments/assets/61b139c8-feae-44aa-924a-c493b4e492a0" />
 
 And now we should play it!
 
 First, ignoring the extremely... well, "nostalgic" UI, I noticed a timer HUD appearing on my computer screen.
 
-<img width="1919" height="1079" alt="image" src="https://gist.github.com/user-attachments/assets/0c5de88a-ba6f-4ded-983a-f5fb0f487800" />
+<img width="1919" height="1079" alt="0c5de88a-ba6f-4ded-983a-f5fb0f487800" src="https://github.com/user-attachments/assets/1523979e-b80d-4ca8-8df3-6269d7552622" />
 
 After checking again, I discovered that they use a pay-by-the-hour system for the Chinese version of Beat Saber, charging users with points, which further confirms its suitability for arcade room. According to the pricing , 20 points allow for 10 minutes of play, and 10 points can be purchased for every 1 CNY (0.14 USD).
 
@@ -44,12 +47,12 @@ Let's ignore all that and actually play a game. Well, it turns out they used Bea
 
 Then, we have a "More Songs" button to download custom levels! But... what are these? And what is beatsaberbbs? Where's my BeatSaver? It looks like they've modified BeatSaverDownloader.
 
-<img width="1920" height="1080" alt="image" src="https://gist.github.com/user-attachments/assets/be954d89-9acd-4b35-98c4-73817996b8ca" />
+<img width="1920" height="1080" alt="be954d89-9acd-4b35-98c4-73817996b8ca" src="https://github.com/user-attachments/assets/a8b44b48-1af7-4852-b6e3-78fc76a542e8" />
 
 So, is it possible for us to delete this timer thing? First, let's uninstall Netvios and then try opening the game.
 The game launched, but it started counting down and popped up a message: "Hey kid, where's Netvios? Find him for me!" The game crashed after the countdown ended.
 
-<img width="1920" height="1080" alt="image" src="https://gist.github.com/user-attachments/assets/8e5bc807-0539-4605-a17f-3e179fa3de9e" />
+<img width="1920" height="1080" alt="8e5bc807-0539-4605-a17f-3e179fa3de9e" src="https://github.com/user-attachments/assets/0768c21c-93e9-4862-8890-b259a6bdecfb" />
 
 So all we need to do is delete NetviosSDK.dll, right? No, it still crashes, but this time the game doesn't even run, whereas it did run briefly before.
 I started looking for the cause, and soon I found something suspicious in the log:
@@ -72,7 +75,7 @@ I didn't even open the game, but the last log is suspicious. I don't think the B
  
  I could actually just drag this into dnspy ​​to decompile it, but I think as a large game company, Netease must have obfuscated it, so I decided to write a small plugin to block NetviosSdkPlugin to quit the game.
 
-<img width="1920" height="1040" alt="image" src="https://gist.github.com/user-attachments/assets/affe5455-bc00-4deb-9674-69c6b57cdead" />
+<img width="1920" height="1040" alt="affe5455-bc00-4deb-9674-69c6b57cdead" src="https://github.com/user-attachments/assets/226eff11-9b7f-4147-813f-16df1da5a26d" />
 
 Unfortunately, I didn't see any indication in the logs that my plugin was loaded. NetviosSdkPlugin still executed OnApplicationQuit, but this time the logs still contained suspicious information.
 
@@ -97,7 +100,7 @@ Wow, it still says "Unauthorized". This means Netease modified BSIPA and added i
 
 Let's take a look at the main program of BSIPA. The version is actually 4.0.6? This is interesting. The BSIPA GitHub repository shows 4.0.5, then jumps directly to 4.1.0; 4.0.6 doesn't exist at all. Clearly, even BSIPA has been modified.
 
-<img width="470" height="651" alt="image" src="https://gist.github.com/user-attachments/assets/3d35aad1-e45d-4974-a444-60208427226e" />
+<img width="470" height="651" alt="3d35aad1-e45d-4974-a444-60208427226e" src="https://github.com/user-attachments/assets/e2df6e72-7ea5-4214-a6a9-6369ec112cc6" />
 
 Now, Try a "Trojan horse" approach, changing an existing mod to our own! The seemingly inactive NetviosHelperPlugin is the perfect target!
 
@@ -111,11 +114,11 @@ Now, Try a "Trojan horse" approach, changing an existing mod to our own! The see
 
 Oops, it seems this whitelist isn't based on filenames; perhaps there's other code checking availability? Even so, it's time to try dnSpy?
 
-<img width="1920" height="1040" alt="image" src="https://gist.github.com/user-attachments/assets/7085ebfa-d62f-496e-baa4-9ef202012745" />
+<img width="1920" height="1040" alt="7085ebfa-d62f-496e-baa4-9ef202012745" src="https://github.com/user-attachments/assets/46fe2593-7ab2-4ed7-86e9-432a49c74f56" />
 
 Emmm, Gosh, I really didn't expect that they didn't do any obfuscation to prevent dnspy. So, since the problem is with SetupInHealthWarningScene, we just need to change that, right? This also further ensures the BSIPA whitelist is in place.
 
-<img width="1144" height="484" alt="image" src="https://gist.github.com/user-attachments/assets/5486bbec-ef88-4967-9a3a-5ab9a5ff743b" />
+<img width="1144" height="484" alt="5486bbec-ef88-4967-9a3a-5ab9a5ff743b" src="https://github.com/user-attachments/assets/766c4c7c-85a6-45ce-973d-168be46e924e" />
 
     [WARNING @ 00:01:13 | IPA/Injector] No backup found! Was BSIPA installed using the installer?
     [WARNING @ 00:01:14 | IPA/LibraryLoader] Could not add DLL directory 
@@ -124,15 +127,15 @@ Emmm, Gosh, I really didn't expect that they didn't do any obfuscation to preven
     [WARNING @ 00:01:15 | IPA/Loader] NetviosSdkPlugin Unauthorized
     [ERROR @ 00:01:15 | IPA/Loader] sdk plugin or playerData plugin not included plugin dir
 
-No, it appears they're using hash value verification for the whitelist. In that case, we should check IPA.Loader.dll.
+No, still crash. it appears they're using hash value verification for the whitelist. In that case, we should check IPA.Loader.dll.
 
 But before we check, we neet to replaced the game with the official IPA 4.0.5 from Github for check. Which worked, but the problem was that we lost all the Chinese localization modifications. It seemed to revert to the original official Beat Saber, which is not what we wanted.
 
-<img width="1919" height="1079" alt="image" src="https://gist.github.com/user-attachments/assets/1fbc2827-dad9-4ae5-bb43-9dcfc01ff9e3" />
+<img width="1919" height="1079" alt="1fbc2827-dad9-4ae5-bb43-9dcfc01ff9e3" src="https://github.com/user-attachments/assets/5150d3ba-3c36-48a8-8845-9f89cc721c85" />
 
 Oh, Their modified BSIPA added the IPA.Netvios class that did not exist originally. Let's check some main code.
 
-<img width="532" height="581" alt="image" src="https://gist.github.com/user-attachments/assets/d67cb538-84b0-431f-86ed-6e71f31e1ab7" />
+<img width="532" height="581" alt="d67cb538-84b0-431f-86ed-6e71f31e1ab7" src="https://github.com/user-attachments/assets/61c8095b-2bb0-4f47-b410-1d947f9e0a9e" />
 
  - IPA.Netvios.Config
 ```
@@ -571,7 +574,7 @@ They chose to let the client accept all SSL certificates and ignore any errors. 
 
 Next, let's take a look at the IPA loading plugin code: IPA.Loader.PluginLoader.
 
-<img width="521" height="750" alt="image" src="https://gist.github.com/user-attachments/assets/c136b110-043c-4a3c-b2c8-343063980829" />
+<img width="521" height="750" alt="c136b110-043c-4a3c-b2c8-343063980829" src="https://github.com/user-attachments/assets/ca0ae14e-8c9b-4492-a22b-740e7402eafa" />
 
 Netease added at least three suspicious entries to this: 
 
@@ -885,4 +888,4 @@ However, IPA.Netvios still exists and cannot be deleted, and there may still be 
 
 However, this makes Netease's multiplayer games unusable (the good news is that it's no longer functional; clicking it only suspends the game).
 
-<img width="1919" height="1079" alt="image" src="https://gist.github.com/user-attachments/assets/a917af03-3f8f-4d47-b6cc-f1a777baf2f5" />
+<img width="1919" height="1079" alt="a917af03-3f8f-4d47-b6cc-f1a777baf2f5" src="https://github.com/user-attachments/assets/7019a005-b237-4776-8c74-d43410a5d602" />
